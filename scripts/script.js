@@ -25,13 +25,11 @@ function checkAnswer(element, word, index) {
     const card = element.closest('.game-card');
     const options = card.querySelectorAll('.option');
     const feedback = card.querySelector('.feedback');
-
-    // Não deixa a mesma carta contar ou mudar depois que já foi respondida corretamente.
+    
     if (card.dataset.answered === 'true') {
         return;
     }
-
-    // Remove classes anteriores desta carta.
+    
     options.forEach(opt => {
         opt.classList.remove('correct', 'incorrect', 'selected');
     });
@@ -43,7 +41,6 @@ function checkAnswer(element, word, index) {
         feedback.classList.add('success');
         card.dataset.answered = 'true';
 
-        // Trava as opções dessa carta depois do acerto.
         options.forEach(opt => opt.classList.add('disabled'));
     } else {
         element.classList.add('incorrect');
