@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Guilherme Henrique</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <main class="portfolio-page">
+        <section class="portfolio-hero">
+            <div class="portfolio-text">
+                <p class="portfolio-tag">Portfólio pessoal</p>
+                <h1>Guilherme Henrique Miranda dos Santos</h1>
+                <p class="portfolio-subtitle">
+                    Estudante de Análise e Desenvolvimento de Sistemas, em constante aprendizado nas áreas de
+                    HTML, CSS, JavaScript e Python. Meu objetivo é transformar criatividade e programação em
+                    experiências interativas, seguindo o caminho para me tornar desenvolvedor de jogos.
+                </p>
+                <div class="hero-buttons">
+                    <a id="start-button" class="primary-button-link" href="JOGO/index.html">Acessar jogo</a>
+                    <a class="secondary-button" href="#contato">Entrar em contato</a>
+                </div>
+            </div>
+
+            <div class="portfolio-card destaque-card">
+                <img src="images/beever.gif" alt="Imagem animada do jogo" class="start-image">
+                <h2>Pinte a Palavra Correta</h2>
+                <p>Jogo educativo criado para praticar leitura, associação de imagens e interação com JavaScript.</p>
+            </div>
+        </section>
+
+        <section class="portfolio-info-grid" aria-label="Informações do portfólio">
+            <article class="portfolio-card">
+                <h2>Habilidades</h2>
+                <ul class="skills-list">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>Lógica de programação</li>
+                    <li>Game development</li>
+                </ul>
+            </article>
+
+            <article class="portfolio-card links-card">
+                <h2>Links</h2>
+                <a href="https://github.com/Hediits" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.instagram.com/gui.h.henrique" target="_blank" rel="noopener">Instagram</a>
+                <a href="#" title="Substitua este link pelo vídeo no YouTube ou Drive">Vídeo explicativo</a>
+            </article>
+        </section>
+
+        <section id="contato" class="portfolio-card contact-section">
+            <div>
+                <h2>Contato</h2>
+                <p>E-mail: <a href="mailto:gmhenrique.profissional@gmail.com">gmhenrique.profissional@gmail.com</a></p>
+                <p>Telefone/WhatsApp: <a href="tel:+5569993375707">(69) 99337-5707</a></p>
+                <p>Use o formulário para enviar uma mensagem. Os campos possuem validação simples em JavaScript.</p>
+            </div>
+
+            <form id="contact-form" class="contact-form" novalidate>
+                <label for="name">Nome</label>
+                <input type="text" id="name" name="name" placeholder="Digite seu nome" required minlength="3">
+
+                <label for="phone">Número</label>
+                <input type="tel" id="phone" name="phone" placeholder="Ex.: 69999999999" required pattern="[0-9]{10,11}">
+
+                <label for="date">Data</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="subject">Assunto</label>
+                <select id="subject" name="subject" required>
+                    <option value="">Selecione uma opção</option>
+                    <option value="projeto">Projeto</option>
+                    <option value="duvida">Dúvida</option>
+                    <option value="contato">Contato profissional</option>
+                </select>
+
+                <fieldset>
+                    <legend>Preferência de contato</legend>
+                    <label><input type="radio" name="contactPreference" value="email" required> E-mail</label>
+                    <label><input type="radio" name="contactPreference" value="whatsapp"> WhatsApp</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Interesses</legend>
+                    <label><input type="checkbox" name="interest" value="web"> Desenvolvimento web</label>
+                    <label><input type="checkbox" name="interest" value="games"> Desenvolvimento de jogos</label>
+                    <label><input type="checkbox" name="interest" value="python"> Python</label>
+                </fieldset>
+
+                <label for="message">Mensagem</label>
+                <textarea id="message" name="message" rows="5" placeholder="Digite sua mensagem" required minlength="10"></textarea>
+
+                <p id="form-feedback" class="form-feedback" aria-live="polite"></p>
+                <button type="submit">Enviar mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>

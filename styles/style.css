@@ -1,0 +1,536 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: #ffd588;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Página do portfólio */
+.portfolio-page {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.portfolio-hero {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 32px;
+    align-items: center;
+    min-height: calc(100vh - 40px);
+}
+
+.portfolio-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.portfolio-text,
+.portfolio-card {
+    background: white;
+    border-radius: 25px;
+    padding: 32px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+}
+
+.portfolio-tag {
+    display: inline-block;
+    margin: 0 0 14px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: #fff1d6;
+    color: #64300e;
+    font-weight: bold;
+}
+
+.portfolio-text h1 {
+    margin: 0 0 18px;
+    color: #333;
+    font-size: 3em;
+    line-height: 1.1;
+}
+
+.portfolio-subtitle,
+.portfolio-card p,
+.portfolio-card li,
+.contact-form label,
+.contact-form legend {
+    color: #555;
+    line-height: 1.6;
+}
+
+.portfolio-subtitle {
+    margin-bottom: 25px;
+    font-size: 1.15em;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.primary-button-link,
+.secondary-button,
+button {
+    border-radius: 8px;
+    padding: 12px 30px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.primary-button-link,
+button {
+    border: none;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.primary-button-link,
+.secondary-button {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.secondary-button {
+    border: 2px solid #667eea;
+    color: #667eea;
+    background: white;
+}
+
+.primary-button-link:hover,
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+.secondary-button:hover,
+.links-card a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);
+}
+
+button {
+    margin: 10px;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.start-image {
+    width: 220px;
+    max-width: 80%;
+    height: auto;
+}
+
+.destaque-card {
+    text-align: center;
+}
+
+.portfolio-card h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.skills-list li {
+    padding: 8px 12px;
+    border: 2px solid #eee;
+    border-radius: 999px;
+    background: #f8f9fa;
+    font-weight: bold;
+}
+
+.links-card a {
+    display: block;
+    margin: 10px 0;
+    padding: 12px 14px;
+    border-radius: 10px;
+    background: #f8f9fa;
+    color: #667eea;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact-section {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 32px;
+    margin-bottom: 30px;
+}
+
+.contact-section a {
+    color: #667eea;
+    font-weight: bold;
+}
+
+.contact-form {
+    display: grid;
+    gap: 12px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font: inherit;
+    background: white;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+}
+
+.contact-form fieldset {
+    margin: 0;
+    padding: 12px 14px;
+    border: 2px solid #eee;
+    border-radius: 12px;
+}
+
+.contact-form fieldset label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-right: 16px;
+}
+
+.contact-form input[type="radio"],
+.contact-form input[type="checkbox"] {
+    width: auto;
+}
+
+.form-feedback {
+    min-height: 24px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.form-feedback.success,
+.feedback.success,
+.score {
+    color: #4CAF50;
+}
+
+.form-feedback.error,
+.feedback.error {
+    color: #f44336;
+}
+
+/* Página do jogo */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.header h1 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 2.5em;
+}
+
+.header p {
+    color: #666;
+    font-size: 1.1em;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.game-card {
+    padding: 20px;
+    border-radius: 15px;
+    background: #f8f9fa;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.option {
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background: white;
+    color: #333;
+    cursor: pointer;
+    font-size: 1.05em;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.option:hover {
+    border-color: #667eea;
+    background: #f0f0f0;
+}
+
+.option.correct {
+    border-color: #45a049;
+    background: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+.option.incorrect {
+    border-color: #da190b;
+    background: #f44336;
+    color: white;
+}
+
+.option.disabled {
+    pointer-events: none;
+}
+
+.feedback {
+    min-height: 25px;
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.button-group {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.progress {
+    margin-top: 30px;
+    color: #333;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.total {
+    color: #666;
+}
+
+.wrong-reaction,
+.win-screen {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.wrong-reaction {
+    z-index: 9999;
+    pointer-events: auto;
+}
+
+.win-screen {
+    z-index: 9998;
+}
+
+.reaction-box {
+    position: relative;
+    width: min(90vw, 520px);
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.deception-gif,
+.explosion-gif {
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.deception-gif {
+    width: 360px;
+    z-index: 1;
+}
+
+.explosion-gif {
+    width: 420px;
+    z-index: 2;
+}
+
+.explosion-gif.hide-explosion {
+    opacity: 0;
+}
+
+.restart-message {
+    position: absolute;
+    bottom: 15px;
+    z-index: 3;
+    padding: 18px 35px;
+    border-radius: 12px;
+    font-size: 1.4em;
+    animation: pulseButton 1s infinite alternate;
+}
+
+@keyframes pulseButton {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.08);
+    }
+}
+
+.win-box {
+    width: min(90vw, 560px);
+    padding: 40px;
+    border-radius: 25px;
+    background: white;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.win-box h2 {
+    margin: 20px 0;
+    color: #333;
+    font-size: 2.2em;
+}
+
+.win-image {
+    width: 220px;
+    max-width: 80%;
+    height: auto;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .portfolio-hero,
+    .portfolio-info-grid,
+    .contact-section {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-hero {
+        min-height: auto;
+    }
+
+    .portfolio-text h1 {
+        font-size: 2.4em;
+    }
+}
+
+@media (max-width: 650px) {
+    body {
+        padding: 12px;
+    }
+
+    .portfolio-page {
+        gap: 24px;
+    }
+
+    .games-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-text,
+    .portfolio-card,
+    .container {
+        padding: 22px;
+        border-radius: 18px;
+    }
+
+    .portfolio-text h1 {
+        font-size: 2em;
+    }
+
+    .portfolio-subtitle {
+        font-size: 1em;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .contact-form fieldset label {
+        display: flex;
+        margin: 8px 0;
+    }
+
+    #start-button,
+    .secondary-button,
+    button {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 420px) {
+    .portfolio-text h1 {
+        font-size: 1.65em;
+    }
+
+    .start-image,
+    .win-image {
+        width: 170px;
+    }
+
+    .header h1 {
+        font-size: 1.8em;
+    }
+
+    .game-card img {
+        max-width: 100%;
+    }
+}
